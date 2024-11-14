@@ -1,0 +1,15 @@
+title: ""
+description: 
+show_downloads: true
+remote_theme: tuur29/pages-themes-cayman
+darkmode: false
+color:
+  gradient_left: "#135FD2"
+  gradient_right: "#5FAAFA"
+  header: "#fff"
+  android_theme: "#fff" # this default to gradient_color
+  link: "#5FAAFA" # this default to gradient_color
+  section_title: "#135FD2" # this default to gradient_color
+syntax_theme: https://stylishthemes.github.io/Syntax-Themes/pygments/css-github/pygments-monokai.css
+buttons:
+  github_hide: true

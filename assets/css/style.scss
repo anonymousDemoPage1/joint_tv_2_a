@@ -1,0 +1,123 @@
+---
+---
+
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+
+// Headers
+$header-heading-color: {{ site.color.header | default: "#fff" }} !default;
+$header-bg-color: {{ site.color.gradient_right | default: "#159957" }} !default;
+$header-bg-color-secondary: {{ site.color.gradient_left | default: "#155799" }} !default;
+
+// Text
+$section-headings-color: {{ site.color.section_title | default: site.color.gradient_right | default: "#159957" }} !default;
+$body-text-color: #606c71 !default;
+$body-link-color: {{ site.color.link | default: site.color.gradient_left | default: "#1e6bb8" }} !default;
+$blockquote-text-color: #819198 !default;
+
+// Code
+$code-bg-color: #f3f6fa !default;
+$code-text-color: #567482 !default;
+
+// Borders
+$border-color: #dce6f0 !default;
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;
+
+@import 'jekyll-theme-cayman';
+
+{% if site.logo_url %}
+.project-name::before {
+    content: " ";
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    padding-right: 0.5em;
+    vertical-align: middle;
+    background: url("{{site.logo_url}}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+{% endif %}
+
+{% if site.hide_first_title %}
+    .main-content h1:first-child { display: none; }
+{% endif %}
+
+body {
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+
+    .main-content {
+        max-width: 100%;
+        margin: auto;
+    }
+    .main-content .small_video {
+        width: 120px;
+        height: 70px;
+    }
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+
+    .main-content {
+        max-width: 100%;
+        margin: auto;
+    }
+    .main-content .small_video {
+        width: 100px;
+        height: 60px;
+    }
+
+}
+
+@media screen and (min-width: 801px) {
+
+    .main-content {
+        max-width: 70%;
+        margin: auto;
+    }
+    .main-content .small_video {
+        width: 330px;
+        height: 200px;
+    }
+
+}
+
+.main-content h1, .main-content h2 {
+    font-weight: bold;
+}
+
+.main-content p {
+    font-size: 1.1em;
+    color: #000000;
+}
+
+.main-content figcaption {
+    // font-style: italic;
+    // padding-top: 0.5em;
+    width: 80%;
+    font-size: 0.9em;
+    color: #606060;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: auto;
+  }
+::-webkit-scrollbar-thumb {
+    // border-radius: 4px;
+    background-color: rgba(0,0,0,.25);
+    // -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
